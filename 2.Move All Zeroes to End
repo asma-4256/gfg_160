@@ -1,0 +1,22 @@
+Move All Zeroes to End
+           Time complexity:O(n)
+           Space complexity:O(1)
+
+code(c++)
+class Solution {
+  public:
+    void pushZerosToEnd(vector<int>& arr) {
+        // code here
+        int i=0,n=arr.size();
+        for(int j=1;j<n;j++){
+            if(arr[j]!=0&&arr[i]==0){
+                swap(arr[i],arr[j]);
+                i++;
+            }
+            if(arr[i]!=0){
+                i++;
+            }
+            
+        }
+    }
+};
