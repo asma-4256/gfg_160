@@ -1,0 +1,19 @@
+10.kadane's Algorithm
+       Time complexity:O(n)
+       Space complexty:O(1)
+
+code(c++):
+class Solution {
+  public:
+    // Function to find the sum of contiguous subarray with maximum sum.
+    int maxSubarraySum(vector<int> &arr) {
+        // code here...
+        int maxi=arr[0];
+        int r=arr[0];
+        for(int i=1;i<arr.size();i++){
+            maxi=max(maxi+arr[i],arr[i]);
+            r=max(r,maxi);
+        }
+        return r;
+    }
+};
